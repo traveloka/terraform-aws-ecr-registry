@@ -1,0 +1,18 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: hashicorp/terraform:light
+    working_directory: /terraform
+    steps:
+      - checkout
+      - run:
+          name: install make
+          command: apk add -U make
+      - run:
+          name: Check if Terraform configurations are properly formatted
+          command: make check-format
+      - run:
+          name: Validate Terraform configurations
+          command: make validate
