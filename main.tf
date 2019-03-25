@@ -21,12 +21,12 @@ resource "aws_ecr_repository" "this" {
 
 resource "aws_ecr_lifecycle_policy" "this" {
   count      = "${var.lifecyle_policy == "" ? 0 : 1}"
-  repository = "${aws_ecr_repository.repo.name}"
+  repository = "${aws_ecr_repository.this.name}"
   policy     = "${var.lifecyle_policy}"
 }
 
 resource "aws_ecr_repository_policy" "this" {
   count      = "${var.repository_policy == "" ? 0 : 1}"
-  repository = "${aws_ecr_repository.repo.name}"
+  repository = "${aws_ecr_repository.this.name}"
   policy     = "${var.repository_policy}"
 }
