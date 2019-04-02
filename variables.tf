@@ -11,7 +11,6 @@ variable "product_domain" {
 variable "environment" {
   description = "Environment where the service run"
   type        = "string"
-  default     = "development"
 }
 
 variable "tags" {

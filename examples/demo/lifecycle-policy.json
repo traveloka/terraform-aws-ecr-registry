@@ -1,0 +1,108 @@
+{
+  "rules": [
+    {
+      "action": {
+        "type": "expire"
+      },
+      "selection": {
+        "countType": "imageCountMoreThan",
+        "countNumber": 30,
+        "tagStatus": "tagged",
+        "tagPrefixList": [
+          "release-"
+        ]
+      },
+      "description": "Only save last 30 release images",
+      "rulePriority": 10
+    },
+    {
+      "action": {
+        "type": "expire"
+      },
+      "selection": {
+        "countType": "imageCountMoreThan",
+        "countNumber": 20,
+        "tagStatus": "tagged",
+        "tagPrefixList": [
+          "master-"
+        ]
+      },
+      "description": "Only save last 20 master images",
+      "rulePriority": 15
+    },
+    {
+      "action": {
+        "type": "expire"
+      },
+      "selection": {
+        "countType": "imageCountMoreThan",
+        "countNumber": 10,
+        "tagStatus": "tagged",
+        "tagPrefixList": [
+          "rc-"
+        ]
+      },
+      "description": "Only save last 10 rc images",
+      "rulePriority": 16
+    },
+    {
+      "action": {
+        "type": "expire"
+      },
+      "selection": {
+        "countType": "imageCountMoreThan",
+        "countNumber": 2,
+        "tagStatus": "untagged"
+      },
+      "description": "Why we should save this?",
+      "rulePriority": 20
+    },
+    {
+      "action": {
+        "type": "expire"
+      },
+      "selection": {
+        "countType": "sinceImagePushed",
+        "countUnit": "days",
+        "countNumber": 1,
+        "tagStatus": "tagged",
+        "tagPrefixList": [
+          "staging-"
+        ]
+      },
+      "description": "do not need these",
+      "rulePriority": 51
+    },
+    {
+      "action": {
+        "type": "expire"
+      },
+      "selection": {
+        "countType": "imageCountMoreThan",
+        "countNumber": 10,
+        "tagStatus": "tagged",
+        "tagPrefixList": [
+          "base-"
+        ]
+      },
+      "description": "Base image",
+      "rulePriority": 70
+    },
+    {
+      "action": {
+        "type": "expire"
+      },
+      "selection": {
+        "countType": "sinceImagePushed",
+        "countUnit": "days",
+        "countNumber": 30,
+        "tagStatus": "tagged",
+        "tagPrefixList": [
+          "pr-"
+        ]
+      },
+      "description": "Delete old PR",
+      "rulePriority": 72
+    }
+  ]
+}
