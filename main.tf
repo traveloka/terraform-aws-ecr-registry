@@ -6,7 +6,7 @@ module "repo_name" {
 }
 
 resource "aws_ecr_repository" "this" {
-  name                 = "${var.standard_resource_naming == "true" ? module.repo_name.name : var.repo_name}"
+  name                 = "${var.default_resource_naming == "true" ? module.repo_name.name : var.repo_name}"
   image_tag_mutability = "${var.image_tag_mutability}"
   tags                 = "${merge(local.tags, var.tags)}"
 

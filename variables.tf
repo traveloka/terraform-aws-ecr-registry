@@ -31,7 +31,7 @@ variable "repository_policy" {
   default     = ""
 }
 
-variable "standard_resource_naming" {
+variable "default_resource_naming" {
   description = "Use standard naming with random id"
   type        = "string"
   default     = "true"
