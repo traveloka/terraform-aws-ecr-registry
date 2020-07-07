@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "tvlk_build_ecr" {
-  source = "../.."
+  source = "../../modules/tvlk-build"
 
   service_name   = "beitest"
   product_domain = "bei"

@@ -10,9 +10,9 @@ import (
 )
 
 // Test main module creation.
-func TestDemoExample(t *testing.T) {
+func TestTvlkBuildExample(t *testing.T) {
 	terraformOptions := &terraform.Options{
-		TerraformDir: "../examples/demo",
+		TerraformDir: "../examples/tvlk-build",
 	}
 
 	defer terraform.Destroy(t, terraformOptions)
@@ -20,7 +20,7 @@ func TestDemoExample(t *testing.T) {
 	terraform.InitAndApply(t, terraformOptions)
 
 	outputs := terraform.OutputAll(t, terraformOptions)
-	assert.True(t, strings.Contains(fmt.Sprint(outputs["name"]), "webdemo"))
-	assert.True(t, strings.Contains(fmt.Sprint(outputs["arn"]), "webdemo"))
-	assert.True(t, strings.Contains(fmt.Sprint(outputs["repository_url"]), "webdemo"))
+	assert.True(t, strings.Contains(fmt.Sprint(outputs["name"]), "bei"))
+	assert.True(t, strings.Contains(fmt.Sprint(outputs["arn"]), "bei"))
+	assert.True(t, strings.Contains(fmt.Sprint(outputs["repository_url"]), "bei"))
 }
