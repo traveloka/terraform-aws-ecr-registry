@@ -1,4 +1,4 @@
-# terraform-aws-ecr-repository
+# Terraform AWS ECR Repository
 [![CircleCI](https://circleci.com/gh/traveloka/terraform-aws-ecr-repository/tree/master.svg?style=svg)](https://circleci.com/gh/traveloka/terraform-aws-ecr-repository/tree/master)
 
 Terraform module for creating ECR Repository
