@@ -37,3 +37,15 @@ variable "delete_timeout" {
   type        = "string"
   default     = "20m"
 }
+
+variable "max_number_of_prod_images" {
+  description = "Maximum number of production images stored in repository"
+  type        = "string"
+  default     = "3"
+}
+
+variable "max_number_of_dev_images" {
+  description = "Maximum number of production images stored in repository"
+  type        = "string"
+  default     = "5"
+}

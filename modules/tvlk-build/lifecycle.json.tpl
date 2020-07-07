@@ -7,7 +7,7 @@
                 "tagStatus": "tagged",
                 "tagPrefixList": ["prod"],
                 "countType": "imageCountMoreThan",
-                "countNumber": 3
+                "countNumber": ${max_number_of_prod_images}
             },
             "action": {
                 "type": "expire"
@@ -20,7 +20,7 @@
                 "tagStatus": "tagged",
                 "tagPrefixList": ["dev"],
                 "countType": "imageCountMoreThan",
-                "countNumber": 5
+                "countNumber": ${max_number_of_dev_images}
             },
             "action": {
                 "type": "expire"
