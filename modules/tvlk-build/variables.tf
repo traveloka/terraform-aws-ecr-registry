@@ -45,7 +45,7 @@ variable "max_number_of_prod_images" {
 }
 
 variable "max_number_of_dev_images" {
-  description = "Maximum number of production images stored in repository"
+  description = "Maximum number of dev images stored in repository"
   type        = "string"
   default     = "5"
 }
