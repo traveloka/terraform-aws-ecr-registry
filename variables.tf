@@ -30,3 +30,27 @@ variable "repository_policy" {
   type        = "string"
   default     = ""
 }
+
+variable "default_resource_naming" {
+  description = "Use standard naming with random id"
+  type        = "string"
+  default     = "true"
+}
+
+variable "image_tag_mutability" {
+  description = "The tag mutability setting for the repository. Must be one of: `MUTABLE` or `IMMUTABLE`"
+  type        = "string"
+  default     = "MUTABLE"
+}
+
+variable "scan_on_push" {
+  description = "Indicates whether images are scanned after being pushed to the repository (`true`) or not scanned (`false`)"
+  type        = "string"
+  default     = "false"
+}
+
+variable "delete_timeout" {
+  description = "How long to wait for a repository to be deleted. Check [Timeout](https://www.terraform.io/docs/configuration/resources.html#timeouts) for more detail."
+  type        = "string"
+  default     = "20m"
+}

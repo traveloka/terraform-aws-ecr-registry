@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "ap-southeast-1"
+}
+
 locals {
   repo_name      = "webdemo"
   product_domain = "web"
