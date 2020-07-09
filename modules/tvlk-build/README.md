@@ -1,6 +1,19 @@
 # Terraform AWS ECR Repository / tvlk-build
 You use this module to create an AWS ECR repository inside tvlk-build account.
 
+## Default
+
+### Lifecycle Policy
+
+* Repository will keep last 3 images with `prod` tag prefix.
+* Repository will keep last 5 images with `dev` tag prefix.
+* Repository will keep last 1 image with no `dev`/`prod`/untagged/any others tag prefix.
+
+### Repository Policy
+
+* Repository gives pull access to all accounts registered in tvlk-org account. 
+* All users authenticated through AWS IAM user or google saml will automatically get access to pull images.
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
