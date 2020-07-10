@@ -12,7 +12,7 @@ import (
 // Test main module creation.
 func TestTvlkBuildExample(t *testing.T) {
 	terraformOptions := &terraform.Options{
-		TerraformDir: "../examples/tvlk-build",
+		TerraformDir: "../examples/with_default_policies",
 	}
 
 	defer terraform.Destroy(t, terraformOptions)
