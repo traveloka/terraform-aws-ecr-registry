@@ -7,5 +7,5 @@ module "tvlk_build_ecr" {
 
   service_name   = "beitest"
   product_domain = "bei"
-  aws_org_id     = "o-dm3g1gnpll"
+  aws_org_id     = "${var.aws_org_id}"
 }

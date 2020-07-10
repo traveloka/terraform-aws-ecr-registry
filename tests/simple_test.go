@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// Test main module creation.
+// Test simple module creation.
 func TestSimpleExample(t *testing.T) {
 	terraformOptions := &terraform.Options{
 		TerraformDir: "../examples/simple",
