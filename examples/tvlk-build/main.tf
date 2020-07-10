@@ -7,5 +7,5 @@ module "tvlk_build_ecr" {
 
   service_name   = "beitest"
   product_domain = "bei"
-  delete_timeout = "1s"
+  aws_org_id     = "o-dm3g1gnpll"
 }
