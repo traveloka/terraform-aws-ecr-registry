@@ -36,6 +36,7 @@ No requirements.
 | lifecyle\_policy | The lifecycle policy of this repository | `string` | `""` | no |
 | max\_number\_of\_dev\_images | Maximum number of dev images stored in repository | `string` | `"5"` | no |
 | max\_number\_of\_prod\_images | Maximum number of production images stored in repository | `string` | `"3"` | no |
+| pd\_aws\_account\_arn | ARN product domain AWS account that has push access to repository `arn:aws:iam::account-id:root` | `string` | n/a | yes |
 | product\_domain | Product domain abbreviation, e.g. bei | `string` | n/a | yes |
 | repository\_policy | The access policy of this repository | `string` | `""` | no |
 | scan\_on\_push | Indicates whether images are scanned after being pushed to the repository (`true`) or not scanned (`false`) | `string` | `"false"` | no |

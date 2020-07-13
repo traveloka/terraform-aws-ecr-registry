@@ -24,6 +24,28 @@ data "aws_iam_policy_document" "tvlk_build_ecr_repository_p_doc" {
       ]
     }
   }
+
+  statement {
+    sid    = "AllowCrossAccountPushAccess"
+    effect = "Allow"
+
+    principals {
+      type = "AWS"
+
+      identifiers = [
+        "${var.pd_aws_account_arn}",
+      ]
+    }
+
+    actions = [
+      "ecr:GetDownloadUrlForLayer",
+      "ecr:BatchCheckLayerAvailability",
+      "ecr:PutImage",
+      "ecr:InitiateLayerUpload",
+      "ecr:UploadLayerPart",
+      "ecr:CompleteLayerUpload",
+    ]
+  }
 }
 
 data "template_file" "tvlk_build_ecr_lifecycle_policy" {
