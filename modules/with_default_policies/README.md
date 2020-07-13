@@ -1,5 +1,5 @@
-# Terraform AWS ECR Repository / tvlk-build
-You use this module to create an AWS ECR repository inside tvlk-build account.
+# Terraform AWS ECR Repository with_default_policies
+You use this module to create an AWS ECR repository with default lifecycle and repository policy.
 
 ## Default
 
