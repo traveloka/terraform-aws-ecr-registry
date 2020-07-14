@@ -54,8 +54,3 @@ variable "aws_org_id" {
   description = "AWS Organisation id that you want give pull access to"
   type        = "string"
 }
-
-variable "pd_aws_account_arn" {
-  description = "ARN product domain AWS account that has push access to repository `arn:aws:iam::account-id:root`"
-  type        = "string"
-}
