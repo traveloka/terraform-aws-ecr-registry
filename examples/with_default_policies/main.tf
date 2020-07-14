@@ -2,7 +2,7 @@ provider "aws" {
   region = "ap-southeast-1"
 }
 
-module "tvlk_build_ecr" {
+module "default_ecr" {
   source = "../../modules/with_default_policies"
 
   service_name   = "beitest"
