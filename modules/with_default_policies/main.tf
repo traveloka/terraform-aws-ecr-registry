@@ -2,7 +2,7 @@ module "with_default_policies" {
   source = "../../"
 
   default_resource_naming = "false"
-  environment             = "management"
+  environment             = "${var.environment}"
   repo_name               = "${var.service_name}-${var.cluster_role}"
   product_domain          = "${var.product_domain}"
   scan_on_push            = "${var.scan_on_push}"

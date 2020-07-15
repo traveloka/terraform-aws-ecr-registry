@@ -60,3 +60,8 @@ variable "aws_org_id" {
   description = "AWS Organisation id that you want give pull access to"
   type        = "string"
 }
+
+variable "environment" {
+  description = "Environment where the ECR repository deployed"
+  type        = "string"
+}
