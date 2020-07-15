@@ -2,7 +2,7 @@
     "rules": [
         {
             "rulePriority": 1,
-            "description": "Limit untagged images",
+            "description": "Limit prod images",
             "selection": {
                 "tagStatus": "tagged",
                 "tagPrefixList": ["prod"],
@@ -15,24 +15,12 @@
         },
         {
             "rulePriority": 2,
-            "description": "Limit untagged images",
+            "description": "Limit dev images",
             "selection": {
                 "tagStatus": "tagged",
                 "tagPrefixList": ["dev"],
                 "countType": "imageCountMoreThan",
                 "countNumber": ${max_number_of_dev_images}
-            },
-            "action": {
-                "type": "expire"
-            }
-        },
-        {
-            "rulePriority": 3,
-            "description": "Limit untagged images",
-            "selection": {
-                "tagStatus": "any",
-                "countType": "imageCountMoreThan",
-                "countNumber": 1
             },
             "action": {
                 "type": "expire"

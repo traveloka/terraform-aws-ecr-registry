@@ -14,14 +14,32 @@ variable "cluster_role" {
   default     = "app"
 }
 
-variable "lifecyle_policy" {
-  description = "The lifecycle policy of this repository"
+variable "default_lifecycle_policy" {
+  description = "Use default lifecycle policy"
+  type        = "string"
+  default     = "false"
+}
+
+variable "max_number_of_prod_images" {
+  description = "(Only available if `default_lifecyle_policy=\"true\"`) Maximum number of production images stored in repository"
+  type        = "string"
+  default     = "3"
+}
+
+variable "max_number_of_dev_images" {
+  description = "(Only available if `default_lifecyle_policy=\"true\"`) Maximum number of dev images stored in repository"
+  type        = "string"
+  default     = "5"
+}
+
+variable "lifecycle_policy" {
+  description = "The lifecycle policy of this repository (`JSON` format)"
   type        = "string"
   default     = ""
 }
 
 variable "repository_policy" {
-  description = "The access policy of this repository"
+  description = "The access policy of this repository (`JSON` format)"
   type        = "string"
   default     = ""
 }
@@ -36,18 +54,6 @@ variable "delete_timeout" {
   description = "How long to wait for a repository to be deleted. Check [Timeout](https://www.terraform.io/docs/configuration/resources.html#timeouts) for more detail."
   type        = "string"
   default     = "20m"
-}
-
-variable "max_number_of_prod_images" {
-  description = "Maximum number of production images stored in repository"
-  type        = "string"
-  default     = "3"
-}
-
-variable "max_number_of_dev_images" {
-  description = "Maximum number of dev images stored in repository"
-  type        = "string"
-  default     = "5"
 }
 
 variable "aws_org_id" {
