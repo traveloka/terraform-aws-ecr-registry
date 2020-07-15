@@ -1,16 +1,9 @@
-module "repo_name" {
-  source = "github.com/traveloka/terraform-aws-resource-naming?ref=v0.18.1"
-
-  name_prefix   = "${var.service_name}-${var.cluster_role}"
-  resource_type = "ecr_repository"
-}
-
 module "with_default_policies" {
   source = "../../"
 
   default_resource_naming = "false"
   environment             = "management"
-  repo_name               = "${module.repo_name.name}"
+  repo_name               = "${var.service_name}-${var.cluster_role}"
   product_domain          = "${var.product_domain}"
   scan_on_push            = "${var.scan_on_push}"
   delete_timeout          = "${var.delete_timeout}"
