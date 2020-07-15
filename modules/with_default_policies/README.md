@@ -5,9 +5,7 @@ You use this module to create an AWS ECR repository with default lifecycle and r
 
 ### Lifecycle Policy
 
-* Repository will keep last 3 images with `prod` tag prefix.
-* Repository will keep last 5 images with `dev` tag prefix.
-* Repository will keep last 1 image with no `dev`/`prod`/untagged/any others tag prefix.
+* tba
 
 ### Repository Policy
 
