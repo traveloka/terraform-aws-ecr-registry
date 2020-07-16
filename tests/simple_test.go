@@ -9,10 +9,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// Test main module creation.
-func TestDemoExample(t *testing.T) {
+// Test simple module creation.
+func TestSimpleExample(t *testing.T) {
 	terraformOptions := &terraform.Options{
-		TerraformDir: "../examples/demo",
+		TerraformDir: "../examples/simple",
 	}
 
 	defer terraform.Destroy(t, terraformOptions)
