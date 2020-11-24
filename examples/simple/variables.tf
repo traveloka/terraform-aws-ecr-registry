@@ -1,5 +1,6 @@
 variable "environment" {
   description = "The environment where the repo placed"
-  type        = "string"
+  type        = string
   default     = "development"
 }
+
