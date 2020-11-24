@@ -8,5 +8,6 @@ module "default_ecr" {
   service_name   = "beitest"
   product_domain = "bei"
   environment    = "special"
-  aws_org_id     = "${var.aws_org_id}"
+  aws_org_id     = var.aws_org_id
 }
+

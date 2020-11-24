@@ -20,17 +20,18 @@ data "aws_iam_policy_document" "default_ecr_repository_p_doc" {
       variable = "aws:PrincipalOrgID"
 
       values = [
-        "${var.aws_org_id}",
+        var.aws_org_id,
       ]
     }
   }
 }
 
 data "template_file" "default_ecr_lifecycle_policy" {
-  template = "${file("${path.module}/lifecycle.json.tpl")}"
+  template = file("${path.module}/lifecycle.json.tpl")
 
-  vars {
-    max_number_of_prod_images = "${var.max_number_of_prod_images}"
-    max_number_of_dev_images  = "${var.max_number_of_dev_images}"
+  vars = {
+    max_number_of_prod_images = var.max_number_of_prod_images
+    max_number_of_dev_images  = var.max_number_of_dev_images
   }
 }
+

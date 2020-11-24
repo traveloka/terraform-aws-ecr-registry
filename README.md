@@ -13,7 +13,9 @@ module "ecr" {
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
 
 ## Providers
 
@@ -34,7 +36,7 @@ No requirements.
 | repo\_name | Name of the repository | `string` | n/a | yes |
 | repository\_policy | The access policy of this repository | `string` | `""` | no |
 | scan\_on\_push | Indicates whether images are scanned after being pushed to the repository (`true`) or not scanned (`false`) | `string` | `"false"` | no |
-| tags | Custom tags for ECR Repo | `map` | `{}` | no |
+| tags | Custom tags for ECR Repo | `map(string)` | `{}` | no |
 
 ## Outputs
 

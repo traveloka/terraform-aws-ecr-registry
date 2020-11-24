@@ -15,7 +15,9 @@ You use this module to create an AWS ECR repository with default lifecycle and r
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
 
 ## Providers
 
