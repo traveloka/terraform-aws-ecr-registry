@@ -29,7 +29,7 @@ data "aws_iam_policy_document" "default_ecr_repository_p_doc" {
 data "template_file" "default_ecr_lifecycle_policy" {
   template = "${file("${path.module}/lifecycle.json.tpl")}"
 
-  vars {
+  vars = {
     max_number_of_prod_images = "${var.max_number_of_prod_images}"
     max_number_of_dev_images  = "${var.max_number_of_dev_images}"
   }
