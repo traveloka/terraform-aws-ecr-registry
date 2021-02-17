@@ -14,26 +14,20 @@ variable "cluster_role" {
   default     = "app"
 }
 
-variable "default_lifecycle_policy" {
-  description = "Use default lifecycle policy"
-  type        = "string"
-  default     = "false"
-}
-
 variable "max_number_of_prod_images" {
-  description = "(Only available if `default_lifecyle_policy=\"true\"`) Maximum number of production images stored in repository"
+  description = "Maximum number of production images stored in repository, for the default lifecycle policy"
   type        = "string"
   default     = "3"
 }
 
 variable "max_number_of_dev_images" {
-  description = "(Only available if `default_lifecyle_policy=\"true\"`) Maximum number of dev images stored in repository"
+  description = "Maximum number of dev images stored in repository, for the default lifecycle policy"
   type        = "string"
   default     = "5"
 }
 
 variable "lifecycle_policy" {
-  description = "The lifecycle policy of this repository (`JSON` format)"
+  description = "The lifecycle policy of this repository (`JSON` format). Keep it blank to use the default policy"
   type        = "string"
   default     = ""
 }

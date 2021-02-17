@@ -3,6 +3,11 @@ variable "repo_name" {
   type        = "string"
 }
 
+variable "service_name" {
+  type        = "string"
+  default     = null
+}
+
 variable "product_domain" {
   description = "The product domain that this service belongs to"
   type        = "string"
